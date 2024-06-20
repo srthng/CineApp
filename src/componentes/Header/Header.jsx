@@ -2,10 +2,9 @@ import Navbar from "../Navbar/Navbar";
 
 function Header() {
     return ( 
-        <header className="flex justify-around bg-black text-white p-5 mb-3">
-            <span>Olá, visitante!</span>
-            <h1>Bem-vindo ao MovieApp!</h1>
-            <Navbar/>
+        <header className="flex justify-around text-white bg-headerRed py-3.5">
+            <h1 className="text-2xl">MovieWatcher</h1>
+            <Navbar></Navbar>
         </header>
      );
 }

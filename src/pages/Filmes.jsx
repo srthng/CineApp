@@ -21,13 +21,13 @@ export default function Filmes() {
 
     return ( 
         <>
-        <h1>Filmes</h1>
+        <h1 className="text-4xl flex ">Catálogo</h1>
         <div className="listaFilmes flex flex-row gap-3 flex-wrap">
             {
                 filmes.map(
                     filme => (
                         <div className="card-filme" key={filme.id}>
-                            <img src={`${urlImg}${filme.poster_path}`}/>
+                            <img className="h-60" src={`${urlImg}${filme.poster_path}`}/>
                             <h1>{filme.title}</h1>
                             <Link to={`${filme.id}`} className="bg-blue-500">Saber Mais</Link>
                         </div>
