@@ -21,15 +21,17 @@ export default function Filmes() {
 
     return ( 
         <>
-        <h1 className="text-4xl flex ">Catálogo</h1>
-        <div className="listaFilmes flex flex-row gap-3 flex-wrap">
+        <h1 className="text-4xl flex justify-center mb-10">Catálogo</h1>
+        <div className="listaFilmes flex flex-row gap-3 flex-wrap justify-center">
             {
                 filmes.map(
                     filme => (
-                        <div className="card-filme" key={filme.id}>
-                            <img className="h-60" src={`${urlImg}${filme.poster_path}`}/>
-                            <h1>{filme.title}</h1>
-                            <Link to={`${filme.id}`} className="bg-blue-500">Saber Mais</Link>
+                        <div className="card-filme mb-6" key={filme.id}>
+                            <img className="h-90" src={`${urlImg}${filme.poster_path}`}/>
+                            <div className="flex justify-between">
+                                <h1 className="">{filme.title}</h1>
+                                <Link to={`${filme.id}`} className="bg-blue-500">Saber Mais</Link>
+                            </div>
                         </div>
                     )
                 )

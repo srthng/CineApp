@@ -6,8 +6,8 @@ function Navbar() {
             <ul className='flex gap-3'>
                 <li className="text-xl"><Link to ="/"> Início</Link></li>
                 <li className="text-xl"><Link to ="filmes"> Filmes </Link></li>
-                <li className="text-xl"><Link to ="sobre"> Sobre </Link></li>
                 <li className="text-xl"><Link to ="contato"> Contato </Link></li>
+                <li className="text-xl"><Link to ="sobre"> Sobre </Link></li>
             </ul>
         </nav>
      );

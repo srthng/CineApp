@@ -3,14 +3,14 @@ import data from '../../articles.json'
 function Home() {
     return ( 
         <>
-            <input type="text" id="buscar" placeholder='Buscar uma notícia' />
             <div className='grid grid-cols-3 gap-4'>
             {
                 data.map( (artigo, index) => (
                     <div className='card' key={index}>
-                        <h2>{artigo.title}</h2>
                         <img className="mb-2" src={artigo.image} alt={artigo.title} />
-                        <div className='tags'>
+                        <h2 className='text-3xl'>{artigo.title}</h2>
+                        <div className='tags flex items-center'>
+                            <h1>Tags : </h1>
                             {artigo.tags.map( (tag, index) => (
                                 <span className="bg-purple-600 p-1 m-1" key={index}>{tag}</span>
                             ))}

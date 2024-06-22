@@ -20,9 +20,13 @@ export default function PaginaFilmes(){
 
     return(
         <>
-        <img src={`${urlImg}${filme.backdrop_path}`}/>
-        <h1>{filme.title}</h1>
-        <p>{filme.overview}</p>
+        <div className="flex h-screen">
+            <img className="m-10 " src={`${urlImg}${filme.poster_path}`}/>
+            <div className="flex items-center justify-center flex-col ">
+                <h1 className="text-7xl mb-10">{filme.title}</h1>
+                <p className="text-xl m-10">{filme.overview}</p>
+            </div>
+        </div>
         </>
     )
 }

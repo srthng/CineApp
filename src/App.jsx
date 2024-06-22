@@ -4,7 +4,7 @@ function App() {
 
   return (
     
-    <main className="container mx-auto">
+    <main className="container mx-auto bg-backgroundBlack text-white">
      <Header/>
      <Outlet/>
      </main>
