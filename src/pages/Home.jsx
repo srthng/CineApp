@@ -1,11 +1,25 @@
 import data from '../../articles.json'
+import {useState} from "react";
 
-function Home() {
+export default function Home() {
+    const [query, setQuery] = useState("")
     return ( 
         <>
+        
+        <div className='flex flex-col justify-center items-center decoration-black text-black'>
+                <input className="text-black" placeholder="Enter Post Title"onChange={event => setQuery(event.target.value)} />
+            </div>
             <div className='grid grid-cols-3 gap-4'>
             {
-                data.map( (artigo, index) => (
+          data.filter(post => {
+            if (query === '') {
+              return post;
+            } else if (post.title.toLowerCase().includes(query.toLowerCase())) {
+              return post;
+            }
+          })
+
+                .map( (artigo, index) => (
                     <div className='card' key={index}>
                         <img className="mb-2" src={artigo.image} alt={artigo.title} />
                         <h2 className='text-3xl'>{artigo.title}</h2>
@@ -26,7 +40,6 @@ function Home() {
             }
             </div>
         </>
+        
     );
 }
-
-export default Home ;
