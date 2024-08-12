@@ -6,8 +6,8 @@ export default function Home() {
     return ( 
         <>
         
-        <div className='flex flex-col justify-center items-center decoration-black text-black'>
-                <input className="text-black" placeholder="Enter Post Title"onChange={event => setQuery(event.target.value)} />
+        <div className='flex flex-col justify-center items-center p-5'>
+                <input className="appearance-none border rounded w-6/12 py-2 px-3 text-white bg-searchBar" placeholder="Digite o Nome do Post"onChange={event => setQuery(event.target.value)} />
             </div>
             <div className='grid grid-cols-3 gap-4'>
             {
