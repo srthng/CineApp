@@ -14,9 +14,11 @@ export default function Home() {
           data.filter(post => {
             if (query === '') {
               return post;
-            } else if (post.title.toLowerCase().includes(query.toLowerCase())) {
+            } 
+            else if (post.title.toLowerCase().includes(query.toLowerCase())) {
               return post;
             }
+          
           })
 
                 .map( (artigo, index) => (

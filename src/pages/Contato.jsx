@@ -22,7 +22,7 @@ function Contato() {
 
         emailjs.send("service_hl051ql","template_jpicc8b", templeteParams, "FAdyUyqqldeILY0aP")
         .then((response) =>{
-            console.log("Email Enviado", response.status, response.text)
+            alert("Email Enviado");
             setName('')
             setEmail('')
             setMessage('')
